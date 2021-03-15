@@ -1,0 +1,1 @@
+docker build -t s2v-dqn:test .
