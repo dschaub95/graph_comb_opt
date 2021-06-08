@@ -40,7 +40,7 @@ RUN apt-get install -y python-pip
 RUN export LC_ALL=C
 
 WORKDIR /home/S2V-DQN
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
 
 ENV CUDA_HOME=/usr/local/cuda-8.0
 ENV LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
