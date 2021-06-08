@@ -1,7 +1,7 @@
 FROM nvidia/cuda:8.0-cudnn7-devel-ubuntu16.04
 
 WORKDIR /home
-COPY . ./S2V-DQN
+# COPY . ./S2V-DQN
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install gcc g++ gfortran wget cpio && \
   cd /tmp && \
   wget http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/15275/l_mkl_2019.3.199.tgz && \
@@ -39,7 +39,7 @@ RUN apt-get install -y python
 RUN apt-get install -y python-pip
 RUN export LC_ALL=C
 
-WORKDIR /home/S2V-DQN
+# WORKDIR /home/S2V-DQN
 # RUN pip install -r requirements.txt
 
 ENV CUDA_HOME=/usr/local/cuda-8.0
